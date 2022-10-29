@@ -12,6 +12,14 @@ import static org.junit.Assert.assertEquals;
 
 public class Get08 extends JsonplaceholderBaseUrl {
 
+    //De-Serialization: Json datayı Java objesine çevirme
+    //Serialization: Java objesini Json formatına çevirme.
+    //De-Serialization: Iki türlü yapacağız.
+    //Gson: Google tarafından üretilmiştir.
+    //Object Mapper: Daha popüler..
+
+
+
     /*
     Given
        https://jsonplaceholder.typicode.com/todos/2
