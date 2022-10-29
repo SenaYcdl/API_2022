@@ -1,16 +1,16 @@
-package base_url;
+package base_urls;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class ReqresBaseUrl {
+public class RestfulBaseUrl {
+
     protected RequestSpecification spec;
 
     @Before
-    public void setup() {
+    public void setup(){
 
-        spec=new RequestSpecBuilder().setBaseUri("https://reqres.in/api").build();
+        spec = new RequestSpecBuilder().setBaseUri("https://restful-booker.herokuapp.com").build();
     }
-
 }
