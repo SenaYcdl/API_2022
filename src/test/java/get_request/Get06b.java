@@ -44,9 +44,7 @@ public class Get06b extends ReqresBaseUrl {
         Response response = given().spec(spec).when().get("/{first}");
         response.prettyPrint();
 
-
 //Do Assertion
-        assertEquals(200, response.statusCode());
         JsonPath jsonPath = response.jsonPath();
 
 //        1)Status code is 200
@@ -72,8 +70,3 @@ public class Get06b extends ReqresBaseUrl {
 
     }
 }
-
-
-
-
-
