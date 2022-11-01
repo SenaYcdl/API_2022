@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import org.junit.Test;
 import org.testng.asserts.SoftAssert;
 
-import java.util.List;
+
 
 import static io.restassured.RestAssured.given;
 
