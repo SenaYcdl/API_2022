@@ -1,7 +1,9 @@
 package pojos;
 
 
-public class Bookingdates {
+public class BookingDatesPojo {
+
+    //INNER POJO
 
     /*
     "bookingdates": {
@@ -10,8 +12,14 @@ public class Bookingdates {
           },
      */
 
+    //1)Tum keyler icin private variable lar olusturuyoruz
+    //2)Tum paramatrelere ve paremetresiz constractor lar olusturuyoruz
+    //3)Public getter setter methodlarini olusturuyoruz
+    //4)To stringle yazdiriyoruz
+
     private String checkin ;
     private String checkout ;
+
 
 
     public String getCheckin() {
@@ -31,10 +39,10 @@ public class Bookingdates {
     }
 
 
-    public Bookingdates() {
+    public BookingDatesPojo() {
     }
 
-    public Bookingdates(String checkin, String checkout) {
+    public BookingDatesPojo(String checkin, String checkout) {
         this.checkin = checkin;
         this.checkout = checkout;
     }
