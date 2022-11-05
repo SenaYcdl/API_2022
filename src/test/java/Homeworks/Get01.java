@@ -4,53 +4,60 @@ import base_urls.AutoBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
-import org.testng.asserts.SoftAssert;
-
-
-
-import static io.restassured.RestAssured.given;
-
+import java.util.List;
+import static io.restassured.RestAssured.*;
+import static junit.framework.TestCase.assertEquals;
 public class Get01 extends AutoBaseUrl {
-
     /*
 Given
-    https://automationexercise.com/api/productsList
+ https://automationexercise.com/api/productsList
 When
-    User sends a GET Request to the url
+ User sends a GET Request to the url
 Then
-    HTTP Status Code should be 200
+ HTTP Status Code should be 200
 And
-    Content Type should be "text/html; charset=utf-8"
+ Content Type should be "text/html; charset=utf-8"
 And
-    Status Line should be HTTP/1.1 200 OK
+ Status Line should be HTTP/1.1 200 OK
 And
-     There must be 12 Women, 9 Men, 13 Kids usertype in products
-  */
-
+  There must be 12 Women, 9 Men, 13 Kids usertype in products
+*/
     @Test
-    public void get01(){
-
+    public void h01() {
         //Set the Url
+        spec.pathParam("first","productsList");
+        //Send The Request and Get The Response
+        Response response = given().spec(spec).get("/{first}");
+        JsonPath jsonPath = response.jsonPath();
+        jsonPath.prettyPrint();
+        //Do Assertion
+        //Then
+        //    HTTP Status Code should be 200
+        assertEquals(200,response.statusCode());
+        //And
+        //    Content Type should be "text/html; charset=utf-8"
+        assertEquals("text/html; charset=utf-8",response.getContentType());
+        //And
+        //    Status Line should be HTTP/1.1 200 OK
+        assertEquals("HTTP/1.1 200 OK",response.getStatusLine());
 
-        spec.pathParams("first","productsList");
-
-       //Send The Request and Get The Response
-
-        Response response=given().spec(spec).when().get("/{first}");
-        response.prettyPrint();
-
-
-       //Do Assertion
-        SoftAssert softAssert = new SoftAssert();
-        JsonPath json = response.jsonPath();
-
-        softAssert.assertEquals(response.getStatusCode(),200);
-        softAssert.assertEquals(response.getContentType(),"text/html; charset=utf-8");
-        softAssert.assertEquals(response.getStatusLine(),"HTTP/1.1 200 OK");
-        softAssert.assertEquals(json.getString("usertype.usertype"), "");
-
-
-        softAssert.assertAll();
+        //And
+        //     There must be 12 Women, 9 Men, 13 Kids usertype in products
+        List<String> categories =  jsonPath.getList("products.category.usertype.usertype");
+        int countWomen = 0;
+        int countMen = 0;
+        int countKids = 0;
+        for (int i = 0; i < categories.size(); i++) {
+            if (categories.get(i).equals("Women")) countWomen++;
+            if (categories.get(i).equals("Men")) countMen++;
+            if (categories.get(i).equals("Kids")) countKids++;
+        }
+        System.out.println("countWomen = " + countWomen);
+        System.out.println("countMen = " + countMen);
+        System.out.println("countKids = " + countKids);
+        assertEquals(12,countWomen);
+        assertEquals(9,countMen);
+        assertEquals(13,countKids);
 
     }
 }

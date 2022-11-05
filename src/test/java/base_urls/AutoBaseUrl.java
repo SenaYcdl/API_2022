@@ -9,8 +9,8 @@ public class AutoBaseUrl {
     protected RequestSpecification spec;
 
     @Before
-    public void setUp() throws Exception {
-
-        spec=new RequestSpecBuilder().setBaseUri("https://automationexercise.com/api").build();
+    public void setUp(){
+        spec= new RequestSpecBuilder()
+                .setBaseUri("https://automationexercise.com/api").build();
     }
 }
