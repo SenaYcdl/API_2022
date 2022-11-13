@@ -92,5 +92,10 @@ And
         assertEquals(expectedData.getData().getEmployee_age(),actualData.getData().getEmployee_age());
         assertEquals(expectedData.getData().getEmployee_salary(),actualData.getData().getEmployee_salary());
         assertEquals(expectedData.getData().getProfile_image(),actualData.getData().getProfile_image());
+
+
+
+
+
     }
 }
