@@ -56,5 +56,12 @@ public class Post05ObjectMapper_Pojo extends JsonplaceholderBaseUrl {
         assertEquals(expectedData.getCompleted(),actualData.getCompleted());
 
 
+
+
+
+
+
+
+
     }
 }
