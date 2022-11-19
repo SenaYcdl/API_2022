@@ -53,10 +53,5 @@ public class Get14ObjectMapper_Pojo extends JsonplaceholderBaseUrl {
       assertEquals(expectedData.getUserId(), actualData.getUserId());
       assertEquals(expectedData.getCompleted(), actualData.getCompleted());
       assertEquals(expectedData.getTitle(), actualData.getTitle());
-
-
-
-
-
     }
 }
