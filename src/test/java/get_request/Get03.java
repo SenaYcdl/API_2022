@@ -62,6 +62,4 @@ public class Get03 extends JsonplaceholderBaseUrl {
                         "completed",equalTo(false),"userId",equalTo(2));
 
     }
-
-
 }
