@@ -55,15 +55,6 @@ I send PATCH Request to the Url
         assertEquals(200,response.getStatusCode());
         assertEquals(expectedData.get("title"),actualData.get("title"));
 
-
-
-
-
-
-
-
-
-
     }
 
 }

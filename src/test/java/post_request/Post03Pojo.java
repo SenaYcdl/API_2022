@@ -58,6 +58,5 @@ public class Post03Pojo extends JsonplaceholderBaseUrl {
         assertEquals(expectedData.getTitle(), actualData.getTitle());
         assertEquals(expectedData.getCompleted(),actualData.getCompleted());
 
-
     }
 }
