@@ -84,6 +84,5 @@ public class Get11 extends GoRestBaseUrl {
 
         assertTrue(females.size() <= males.size());
 
-
     }
 }

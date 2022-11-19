@@ -125,7 +125,6 @@ public class Get06 extends RestfulBaseUrl {
 
          */
 
-
     }
 }
 
