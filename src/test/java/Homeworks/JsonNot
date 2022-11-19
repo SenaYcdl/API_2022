@@ -82,7 +82,6 @@ public class Model {
     }
 }
 
-
 Jackson Deserialization Annotations
 @JsonCreator
 Okumak istediğimiz JSON değeri modelimizdeki anahtarlardan farklı bir anahtar içeriyorsa, modelin kurucusu aracılığıyla okuduğumuz JSON’un doğru şekilde alınmasını sağlar.

@@ -71,7 +71,6 @@ public class Get15 extends RestfulBaseUrl {
         softAssert.assertAll();
 
 
-
         //hard assertion
         assertEquals(200, response.statusCode());
         assertEquals(expectedData.getFirstname(), actualData.getFirstname());
