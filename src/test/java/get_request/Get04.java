@@ -53,6 +53,4 @@ public class Get04 extends JsonplaceholderBaseUrl {
                         "userId",hasItems(2,7,9));
 
     }
-
-
 }
