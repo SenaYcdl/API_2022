@@ -61,7 +61,5 @@ public class Get13Pojo extends GoRestBaseUrl {
         assertEquals(goRestDataPojo.getEmail(), actualData.getData().getEmail());
         assertEquals(goRestDataPojo.getGender(), actualData.getData().getGender());
         assertEquals(goRestDataPojo.getStatus(), actualData.getData().getStatus());
-
-
     }
 }
