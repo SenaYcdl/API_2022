@@ -37,5 +37,4 @@ public class Get05 extends RestfulBaseUrl {
         assertTrue(response.asString().contains("bookingid"));
     }
 
-
 }
