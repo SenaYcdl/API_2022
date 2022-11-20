@@ -63,7 +63,5 @@ public class Get09 extends RestfulBaseUrl {
         assertEquals(expectedData.get("depositpaid"),actualData.get("depositpaid"));
         assertEquals(bookingdatesMap.get("checkin"), ((Map)(actualData.get("bookingdates"))).get("checkin"));//Key-Value ikilileri String-Object şeklinde olduğundan, Bookingdata value kısmını casting ile Map yaptık.
         assertEquals(bookingdatesMap.get("checkout"), ((Map)(actualData.get("bookingdates"))).get("checkout"));
-
-
     }
 }
