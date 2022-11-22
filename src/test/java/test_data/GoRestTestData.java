@@ -22,6 +22,5 @@ public class GoRestTestData {
         expectedData.put("data",data);
 
         return expectedData;
-
     }
 }
